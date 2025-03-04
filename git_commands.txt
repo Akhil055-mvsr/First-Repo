@@ -1,0 +1,60 @@
+# 1️⃣ Set up Git (Only needed once)
+git config --global user.name "YourGitHubUsername"
+git config --global user.email "your-email@example.com"
+
+# 2️⃣ Initialize a Git repository (Run this inside your project folder)
+git init  
+
+# 3️⃣ Add a remote repository  
+git remote add origin https://github.com/YourGitHubUsername/YourRepository.git  
+
+# 4️⃣ Check the remote URL (To confirm it's added correctly)
+git remote -v  
+
+# 5️⃣ Create a file (Example: README)
+echo "My First Repo" > README.md  
+
+# 6️⃣ Add all files to Git tracking
+git add .  
+
+# 7️⃣ Commit changes with a message
+git commit -m "Initial commit"  
+
+# 8️⃣ Push code to GitHub using Personal Access Token (PAT)
+git push https://<YOUR_PAT>@github.com/YourGitHubUsername/YourRepository.git
+
+# 9️⃣ (Optional) If branch issues arise, set upstream branch
+git branch -M main
+git push -u origin main
+
+# 🔟 To pull latest changes from GitHub  
+git pull origin main  
+
+# 1️⃣1️⃣ If a remote repo contains new commits, fetch and merge  
+git fetch origin  
+git merge origin/main  
+
+# 1️⃣2️⃣ To remove a file from the repo
+git rm <filename>
+git commit -m "Removed <filename>"
+git push origin main  
+
+# 1️⃣3️⃣ To remove a folder
+git rm -r <foldername>
+git commit -m "Removed <foldername>"
+git push origin main  
+
+# 1️⃣4️⃣ To check the current status of Git
+git status  
+
+# 1️⃣5️⃣ To check commit history
+git log  
+
+# 1️⃣6️⃣ To reset the last commit (if needed)
+git reset --soft HEAD~1  
+
+# 1️⃣7️⃣ To delete a local branch
+git branch -d <branchname>
+
+# 1️⃣8️⃣ To delete a remote branch
+git push origin --delete <branchname>
